@@ -1,0 +1,473 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+@keyframes showintro{
+	0%{
+		opacity: 1;
+	}
+
+	90%{
+		transform:translateX(0);
+	}
+
+	100%{
+		opacity: 1;
+		transform:translateX(100%);
+	}
+}
+
+.intro{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	opacity: 0;
+	animation:showintro 5s linear;
+	z-index: 100;
+}
+
+.intro .supriyo{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+
+.supriyo video{
+	position: absolute;
+	min-width: 100%;
+	min-height:100%;
+}
+
+.supriyo-content{
+	text-align: center;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
+
+.supriyo-content img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border:5px solid #fff;
+}
+
+@keyframes opacity{
+	0%{
+		opacity: 0;
+	}
+
+	20%{
+		opacity: 0;
+	}
+
+	40%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes name
+{
+	0%
+	{
+		transform:translateX(-120%);
+	}
+
+	100%
+	{
+		transform:translateX(0);
+	}
+}
+
+@keyframes opacity1
+{
+	0%
+	{
+		opacity: 0;
+	}
+
+	40%
+	{
+		opacity: 0;
+	}
+
+	60%
+	{
+		opacity: 1;
+	}
+	100%
+	{
+		opacity: 1;
+	}
+}
+
+.supriyo-content .name
+{
+	font-size: 100px;
+	font-weight: bold;
+	font-family: sans-serif;
+	margin:20px 0;
+	color: #fff;
+	text-shadow:0 0px 5px #fff;
+	opacity: 0;
+	animation:name 1s ease 1s,opacity 5s linear;
+
+}
+
+@keyframes presents
+{
+	0%
+	{
+		transform:translateX(120%);
+	}
+
+	100%
+	{
+		transform:translateX(0);
+	}
+}
+
+.supriyo-content .presents
+{
+	font-size: 36px;
+	font-weight: bold;
+	font-style: italic;
+	font-family: sans-serif;
+	margin:20px 0;
+	color: red;
+	text-shadow:0 0px 3px red;
+	opacity: 0;
+	animation:presents 1s ease 2s,opacity1 5s linear;
+
+}
+
+
+/** part2 animation .. animation-itself **/
+
+@keyframes show-itself
+{
+	0%,100%
+	{
+		opacity: 1;
+	}
+}
+
+.animation-itself
+{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background:url(../images/city/city.png) no-repeat;
+	background-size: 100% 100%;
+	z-index: 50;
+	opacity: 0;
+	animation:show-itself 15s linear 4s;
+}
+
+
+/** bird **/
+
+
+@keyframes bird
+{
+	from{
+		background-position-x:0;
+	}
+
+	to
+	{
+		background-position: 400px;
+	}
+}
+
+@keyframes birdmove
+{
+	0%
+	{
+		left: 0;
+		top: 5%;
+	}
+
+	100%
+	{
+		left: 100%;
+		top: 5%;
+	}
+}
+
+.bird
+{
+	position: absolute;
+	width: 100px;
+	height: 69px;
+	top: 5%;
+	left: 5%;
+	background:url(../images/city/bird2.png);
+	animation:bird 1s steps(4) infinite 4s,birdmove 5s linear infinite 4s;
+}
+
+
+/** car1 **/
+
+@keyframes car1
+{
+	0%{
+		left: -20%;
+		opacity: 1;
+	}
+
+	99%
+	{
+		opacity: 1;
+	}
+
+	100%
+	{
+		left: 120%;
+		opacity: 0;
+	}
+}
+
+.car1
+{
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	width: 640px;
+	height: 320px;
+	background:url(../images/city/car1.png);
+	animation:car1 3s linear 6s;
+	opacity: 0;
+	z-index: 2;
+}
+
+/** car2 **/
+
+@keyframes car2
+{
+	0%{
+		right: -20%;
+		opacity: 1;
+	}
+
+	99%
+	{
+		opacity: 1;
+	}
+
+	100%
+	{
+		right: 120%;
+		opacity: 0;
+	}
+}
+
+.car2
+{
+	position: absolute;
+	top: 18%;
+	right: 20%;
+	width: 640px;
+	height: 320px;
+	background:url(../images/city/car2.png);
+	animation:car2 3s linear 6s;
+	transform:rotateY(180deg); /** for reversing car diretion **/
+	opacity: 0;
+	z-index: 1;
+}
+
+/** car3 **/
+
+@keyframes car3
+{
+	0%{
+		left: -20%;
+		opacity: 1;
+	}
+
+	99%
+	{
+		opacity: 1;
+	}
+
+	100%
+	{
+		left: 120%;
+		opacity: 0;
+	}
+}
+
+.car3
+{
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	width: 640px;
+	height: 320px;
+	background:url(../images/city/car3.png);
+	animation:car3 3s linear 11s;
+	opacity: 0;
+	z-index: 2;
+}
+
+/** car4 **/
+
+@keyframes car4{
+	0%{
+		right: -20%;
+		opacity: 1;
+	}
+
+	99%{
+		opacity: 1;
+	}
+
+	100%{
+		right: 120%;
+		opacity: 0;
+	}
+}
+
+.car4{
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	width: 640px;
+	height: 320px;
+	animation:car4 3s linear 10s;
+	opacity: 0;
+	z-index: 1;
+}
+
+
+/** boy **/
+
+@keyframes boy-walk{
+	from{
+		background-position: 0;
+	}
+
+	to{
+		background-position: 4098px;
+	}
+}
+
+@keyframes boymove{
+	from{
+		left: 0;
+	}
+
+	to{
+		left: 100%;
+	}
+}
+
+.boy{
+	position: absolute;
+	width: 273.2px;
+	height: 251px;
+	top: 15%;
+	left: 20%;
+	background:url(../images/city/boy_walk4.png);
+	animation:boy-walk 1s steps(15) infinite 4s,boymove 10s linear infinite 4s;
+}
+
+/** girl **/
+
+@keyframes girl-walk{
+	from{
+		background-position: 0;
+	}
+
+	to{
+		background-position: 4583px;
+	}
+}
+
+@keyframes girlmove{
+	from{
+		right: 0;
+	}
+
+	to{
+		right: 100%;
+	}
+}
+
+.girl{
+	position: absolute;
+	width: 229.15px;
+	height: 250px;
+	top: 28%;
+	right: 20%;
+	background:url(../images/city/girl_walk4.png);
+	animation:girl-walk 1s steps(20) infinite 4s,girlmove 10s linear infinite 4s;
+	transform:rotateY(180deg);
+	z-index: 4;
+}
+
+/** finish **/
+
+@keyframes vanish{
+	0%,100%{
+		opacity: 0;
+	}
+}
+
+@keyframes come{
+	0%{
+		transform:translate(0,-100%);
+	}
+	100%{
+		transform:translate(0,0);
+	}
+}
+
+.finish{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	opacity: 1;
+	color: #fff;
+	animation:vanish 14s linear,come 3s ease 14s;
+	background-color: #000;
+
+}
+
+.finish h1{
+	font-size: 100px;
+	z-index: 5;
+	text-shadow: 0 0 10px white;
+}
+
+.snow-bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation:vanish 19s linear,come 3s ease 19s;
+	opacity: 1;
+}
+
+.snow-bg video{
+	min-height: 100%;
+	min-width: 100%;
+}
